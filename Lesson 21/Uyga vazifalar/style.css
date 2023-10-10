@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 28%;
+    margin: 15px auto
+}
+.nav{
+    display: flex;
+    width: 100%;
+    height: 8vh;
+    background: gray;
+    align-items: center;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    /* justify-content: right; */
+}
+.nav p{
+    font-size: 22px;
+    padding-left: 150px;
+}
+.banner{
+    width: 100%;
+    height: 10vh;
+    background: gray;
+    text-align: center;
+    padding-top: 22px;
+    margin-bottom: 10px;
+}
+.intro{
+    width: 100%;
+    height:9vh;
+    background: gray;
+    text-align: center;
+    padding-top:20px ;
+    margin-bottom: 15px;
+}
+.float{
+    width: 100%;
+}
+.box{
+    width: calc(100% / 3 - 30px);
+    height: 26vh;
+    background: gray;
+    float: left;
+    /* margin:15px; */
+    text-align: center;
+    align-items: center;
+    padding-top: 70px;
+}
+.bx1{
+    width: 25%;
+}
+.bx2{
+    width: 25%;
+    margin: 0 47px 12px 47px;
+
+}
+.bx3{
+    width: 25%;
+
+}
+.clear{
+    clear: both;
+}
+.footer{
+    width: 100%;
+    height: 4vh;
+    background: gray;
+    padding-left: 148px;
+    padding-top:3px ;
+    margin-bottom: 50px;
+}
+
+/*  */
+
+.container2{
+    width: 20%;
+    margin: 0 auto;
+}
+.nav2{
+    width: 100%;
+    height: 8vh;
+    background: grey;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+.sidebar1{
+    height: 10vh;
+    display: inline-flex;
+    margin-right:4px ;
+}
+.sidebar{
+    float:right;
+    width: 80%;
+    background: grey;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.br{
+    width: 68%;
+    height: 11vh;
+    padding-top: 28px;
+    
+}
+.bar{
+    width:68%;
+    height: 25vh;
+    padding-top: 70px;
+}
+.footeer{
+    width: 100%;
+    height: 3vh;
+    background: grey;
+    margin-bottom: 15px;
+    padding-left: 100px;
+    padding-top: 1px;
+}

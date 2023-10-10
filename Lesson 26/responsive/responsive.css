@@ -1,0 +1,117 @@
+@media screen and (max-width:576px) {
+    .container{
+        /* width: 100%; */
+        margin: 0px 0px 0px 0px ;
+    }
+    header{
+        padding-top:60px;
+    }
+    nav {  
+        flex-direction: column;
+    }
+    nav a{
+        text-align: center;
+    }
+    .block{
+        display: flex;
+        width: 100%;
+        flex-direction: column;    
+    }
+    .input-email{
+       padding: 20px 150px 20px 20px;
+       margin: 60px 0 20px 120px;
+    }
+    .input-submit{
+        margin-left:200px ;
+        margin-bottom: 15px;
+    }
+    button{
+        margin-left: 180px;
+    }
+}
+@media (min-width:577px) and (max-width:772px){
+    .container{
+        margin: 0px 0px 0px 0px;
+        width: 100%;
+        /* width: 772px; */
+    }
+    section{
+        /* width: 772px; */
+        width: 100%;
+        margin-left: 0;
+    }
+    nav a{
+        width: 148px;
+        text-align: center;
+        padding: 30px 7px 30px 5px;
+    }
+    nav {  
+        flex-direction: column;
+        display: none;
+    }
+    nav a{
+        text-align: center;
+        display: none;
+    }
+    .nav{
+        text-align: center;
+        padding: 20px 0;
+        display:block ;
+    }
+    .nav ul a{
+        display: block;
+    }
+    .nav button{
+        margin: 0;
+         padding:6px 30px; 
+         color: blueviolet;
+         border: 2px solid gray;
+    }
+    .nav button:focus + ul{
+        display: block;
+    }
+    .nav ul{
+        line-height: 1px;
+        margin-left: 40%;
+        display: none;
+        list-style: none;
+    }
+    /* .nav ul li{
+        background: gray;
+        font-weight: bold;
+    } */
+    header{
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0px;
+    }
+    .block{
+        width:48%;
+        /* width: 346px; */
+        /* width: 358px; */
+        height: 100vh;
+        margin-left: 5px;
+    }
+    button{
+        margin-bottom: 40px;
+        margin-left:260px;
+        margin-right: 0px;
+    }
+    .input-email{
+        padding: 12px  100px 10px 8px ;
+        margin-top: 80px;
+        margin-left:270px;
+        margin-bottom: 18px;
+    }
+    .input-submit{
+        margin-left:320px ;
+        margin-bottom: 15px;
+    }
+    footer{
+        width: 100%;
+    }
+    .footer-h3{
+        padding-left: 60px;
+        margin-right: 0px;
+    }
+}

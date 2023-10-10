@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1200px;
+    margin: 10px auto;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    border: 1px solid ;
+    animation-name: animat;
+    animation-duration: 4s;
+    -moz-animation-name:animat; 
+    -moz-animation-direction: 4s;
+    animation-iteration-count: 2;
+    position: relative;
+    -webkit-animation-name:animat; 
+    -webkit-animation-direction: 4s;
+}
+@keyframes animat{
+    0%{
+        top:0;
+        left: 0;
+        background-color: red;
+    }
+    25%{
+        top: 0;
+        left: 500px;
+        background-color: yellow;
+        transform: rotate(360deg);
+    }
+    50%{
+        left: 500px;
+        background-color: blue;
+    }
+    75%{
+        top: 500px;
+        left: 0;
+        background-color: palevioletred;
+    }
+    100%{
+        top: 0px;
+        left: 0px;
+        background: black;
+    }
+}

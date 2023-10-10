@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 100%;
+    margin: 25px 0 0 25px;
+}
+.box{
+    width: 300px;
+    height: 300px;
+    border: 1px thick solid red;
+    text-align: center;
+    box-shadow: 1px 1px 15px black, -1px -1px 15px blue;
+    animation-name: salokh;
+    animation-duration: 3s;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@keyframes salokh{
+    0%{
+        top: 0;
+        left: 0;
+        background-color: brown;
+    }
+    25%{
+        top: 0;
+        left: 500px;
+        background-color: blueviolet;
+        transform: rotate(360deg);
+    }
+    50%{
+        top: 500px;
+        left: 500px;
+        background-color: blue;
+        transform: scaleX(1.5);
+    }
+    75%{
+        top: 500px;
+        left: 0;
+        background-color: black;
+        transform: skewY(45deg);
+    }
+    100%{
+        top: 0;
+        left: 0;
+        background-color: aqua;
+        transform: translateX(200px 100px);
+    }
+}
