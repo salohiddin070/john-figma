@@ -202,29 +202,29 @@ header .head-content .head-left button {
 
 
 
-footer {
-    display: flex;
-    justify-content: center;
-    padding-top: 51px;
-    padding-bottom: 54px;
+    footer {
+        display: flex;
+        justify-content: center;
+        padding-top: 51px;
+        padding-bottom: 54px;
 
-}
+    }
 
-footer .socials ul {
-    display: flex;
-    gap: 35px;
-    margin-bottom: 26px;
-}
+    footer .socials ul {
+        display: flex;
+        gap: 35px;
+        margin-bottom: 26px;
+    }
 
-footer .socials ul li a i {
-    font-size: 30px;
-    color: var(--dark);
-}
+    footer .socials ul li a i {
+        font-size: 30px;
+        color: var(--dark);
+    }
 
-footer .socials small {
-    color: var(--dark);
-    font-size: 14px;
-}
+    footer .socials small {
+        color: var(--dark);
+        font-size: 14px;
+    }
 
 @media only screen and (max-width: 576px) { 
     /* HEADER */
