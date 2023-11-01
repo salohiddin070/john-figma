@@ -1,0 +1,80 @@
+// COLOR VARTABLES
+$primary:#1B75BB;
+$dark-text:#081F32;
+$white:#fff;
+
+// OPACITY
+$opa-06:0.6;
+$opa-07:0.7;
+$opa-08:0.8;
+
+// BORDER RADIUS
+$main-border: 1px solid rgba(0, 0, 0, 0.10);
+$br-5: 5px;
+$br-10:10px;
+
+//  BACKROUND
+$bg-top: rgba(225, 225, 225, 0.21);
+$bg-content: rgba(226, 226, 226, 0.40);
+
+$bg-f-5: blur(5px);
+$bg-f-35: blur(35px);
+
+// BOX SHADOF
+$sh-client: 0px 4px 30px 0px rgba(199, 199, 199, 0.25);
+$main-transition: all 0.3s ease;
+
+// 
+%royal-btn{
+    padding: 15px 30px;
+    border-radius: $primary;
+    border-radius: $br-5;
+    color: $white;
+    background-color: $primary;
+
+}
+
+%royal-choose{
+    text-align: center;
+    padding: 17px;
+    box-shadow: $sh-client;
+    border-radius: $br-5;
+    border-radius: $main-border;
+}
+
+%royal-client-say{
+    border-radius: $br-10;
+    border: $main-border;
+    background-color: $white;
+    transition: $main-transition;
+    padding: 28px 40px;
+    text-align: center;
+
+    &:hover{
+        box-shadow: $sh-client;
+    }
+}
+
+// TYPOGRAPHY
+@mixin titleCreator($fw, $lh, $fs){
+    font-family: 'Gelasion', serif;
+    color: $dark-text;
+    font-weight: $fw;
+    line-height: $lh;
+    font-size: $fs;
+}
+
+%paragraphy{
+    font-size: 18px;
+    color: rgba($color: $dark-text, $alpha :0.6);
+    line-height: 160%;
+}
+
+%subtitle{
+    font-size: 20px;
+    font-weight: 500;
+    color: $primary;
+    text-transform: uppercase;
+    line-height: 150%;
+    letter-spacing: 2px;
+}

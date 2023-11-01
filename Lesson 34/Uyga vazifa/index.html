@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Uyga vazifa</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container"
+     <--  1. Badge turlari -->
+
+    <h1>Salohiddin <span class="badge badge-secondary">New</span></h1>
+    <h2>Salohiddin <span class="badge badge-secondary">New</span></h2>
+    <h3>Salohiddin <span class="badge badge-secondary">New</span></h3>
+    <h4>Salohiddin <span class="badge badge-secondary">New</span></h4>
+    <h5>Salohiddin <span class="badge badge-secondary">New</span></h5>
+    <h6>Salohiddin <span class="badge badge-secondary">New</span></h6>
+
+    <button class="btn btn-primary">
+        Qo'chqorov <span class="badge badge-light">1</span>
+    </button>
+
+    <button class="btn btn-primary">
+        Telegram<span class="badge badge-light">9</span>
+        <span class="sr-only">unread messages</span>
+    </button>
+    <br>
+    <span class="badge badge-primary">Primary</span>
+    <span class="badge badge-secondary">Secondary</span>
+    <span class="badge badge-success">Success</span>
+    <span class="badge badge-danger">Danger</span>
+    <span class="badge badge-warning">Warning</span>
+    <span class="badge badge-info">Info</span>
+    <span class="badge badge-light">Light</span>
+    <span class="badge badge-dark">Dark</span>
+    <br>
+    <span class="badge badge-pill badge-primary">Primary</span>
+    <span class="badge badge-pill badge-secondary">Secondary</span>
+    <span class="badge badge-pill badge-success">Success</span>
+    <span class="badge badge-pill badge-danger">Danger</span>
+    <span class="badge badge-pill badge-warning">Warning</span>
+    <span class="badge badge-pill badge-info">Info</span>
+    <span class="badge badge-pill badge-light">Light</span>
+    <span class="badge badge-pill badge-dark">Dark</span>
+    <br>
+    <a href="#" class="badge badge-primary">Primary</a>
+    <a href="#" class="badge badge-secondary">Secondary</a>
+    <a href="#" class="badge badge-success">Success</a>
+    <a href="#" class="badge badge-danger">Danger</a>
+    <a href="#" class="badge badge-warning">Warning</a>
+    <a href="#" class="badge badge-info">Info</a>
+    <a href="#" class="badge badge-light">Light</a>
+    <a href="#" class="badge badge-dark">Dark</a>
+    <br>
+    <hr>
+
+    <!-- 2. Forms -->
+
+    <form>
+        <div class="form-group">
+            <label>Email address</label>
+            <input type="email" class="form-control" placeholder="Enter email">
+            <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" placeholder="Password">
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input">
+            <label class="form-check-label">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <!--  -->
+
+    <br> <br>
+    <form>
+        <div class="form-group">
+            <label>Email address</label>
+            <input type="email" class="form-control" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+            <label>Example select</label>
+            <select class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Example multiple select</label>
+            <select multiple class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Example textarea</label>
+            <textarea class="form-control" rows="3"></textarea>
+        </div>
+    </form>
+
+    <form>
+        <div class="form-group">
+            <label>Example file input</label>
+            <input type="file" class="form-control-file">
+        </div>
+    </form>
+
+    <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg"> <br>
+    <input class="form-control" type="text" placeholder="Default input"> <br>
+    <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm"> <br>
+
+    <br>
+
+    <select class="form-control form-control-lg">
+        <option>Salohiddin</option>
+        <option>Kamoliddin</option>
+        <option>Jamoliddin</option>
+      </select> <br>
+      <select class="form-control">
+        <option>Qo'chqorov</option>
+        <option>Xoldarov</option>
+        <option>Sartayev</option>
+      </select> <br>
+      <select class="form-control form-control-sm">
+          <option>Kamoliddinovich</option>
+        <option>Qo'chqorovich</option>
+      </select> <br>
+
+      <br>
+
+      <input class="form-control" type="text" placeholder="Readonly input here…" readonl>
+
+      <br>
+
+      <form>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control-plaintext" value="salokh2008@google.com">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" placeholder="Password">
+          </div>
+        </div>
+      </form>
+
+      <br>
+
+      <form class="form-inline">
+        <div class="form-group mb-2">
+          <label class="sr-only">Email</label>
+          <input type="text" readonly class="form-control-plaintext" value="salokh2008@google.com">
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+          <label for="inputPassword2" class="sr-only">Password</label>
+          <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Jo'natish bosing.</button>
+      </form>
+
+      <br>  
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">
+          To'g'ri checkbox
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" disabled>
+        <label class="form-check-label" for="defaultCheck2">
+          NoTo'g'ri checkbox
+        </label>
+      </div>
+
+      <br>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios"  checked>
+        <label class="form-check-label" for="exampleRadios1">
+          1-radio
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios">
+        <label class="form-check-label">
+          2-radio
+        </label>
+      </div>
+      <div class="form-check disabled">
+        <input class="form-check-input" type="radio" name="exampleRadios" disabled>
+        <label class="form-check-label" for="exampleRadios3">
+          3-radio yo'q
+        </label>
+      </div>
+
+      <br>
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label">1</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label" for="inlineCheckbox2">2</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" disabled>
+        <label class="form-check-label" for="inlineCheckbox3">3 (yo'q)</label>
+      </div>
+
+      <br>
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions">
+        <label class="form-check-label">1</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions">
+        <label class="form-check-label">2</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" disabled>
+        <label class="form-check-label" for="inlineRadio3">3 (qolmadi.)</label>
+      </div>
+
+      <br> <br>
+
+      <form>
+        <div class="form-group">
+          <label>Ismingiz:</label>
+          <input type="text" class="form-control"  placeholder="Kiriting...">
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Familayangiz:</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Kiriting:">
+        </div>
+      </form>
+
+      <br>
+
+      <form>
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="First name">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Last name">
+          </div>
+        </div>
+      </form>
+
+      <br>
+
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Email</label>
+            <input type="email" class="form-control" placeholder="Email">
+          </div>
+          <div class="form-group col-md-6">
+            <label>Password</label>
+            <input type="password" class="form-control"  placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Address</label>
+          <input type="text" class="form-control"  placeholder="1234 Main St">
+        </div>
+        <div class="form-group">
+          <label>Address 2</label>
+          <input type="text" class="form-control" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>City</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-group col-md-4">
+            <label>State</label>
+            <select class="form-control">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label>Zip</label>
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox">
+            <label class="form-check-label">
+              Check me out
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </form>
+    </div>
+</body>
+
+</html>
