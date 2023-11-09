@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.s-container {
+  width: 1120px;
+  margin: 0 auto; }
+
+a {
+  text-decoration: none; }
+
+p {
+  color: #445B78; }
+
+.s-section {
+  display: flex;
+  gap: 122px;
+  margin-bottom: 64px; }
+  .s-section-left {
+    padding-top: 75px;
+    width: 473px;
+    height: 701px;
+    flex-shrink: 0; }
+    .s-section-left span {
+      color: #92A0B3;
+      font-size: 13px;
+      display: block;
+      letter-spacing: 2.24px;
+      text-transform: uppercase; }
+    .s-section-left h1 {
+      width: 470px;
+      color: #03060b;
+      font-family: Arial;
+      font-size: 63px;
+      font-weight: 700;
+      line-height: 64px;
+      letter-spacing: 0.64px;
+      margin-top: 25px;
+      margin-bottom: 34px; }
+    .s-section-left p {
+      width: 470px;
+      color: #445b78;
+      font-family: Arial;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 25.6px;
+      letter-spacing: 0.16px;
+      margin-bottom: 21px; }
+      .s-section-left p:last-child {
+        margin-bottom: 32px; }
+    .s-section-left a {
+      color: #3880FF;
+      font-family: Arial;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.28px;
+      padding-bottom: 20px; }
+  .s-section-right img {
+    width: 603px;
+    height: 843px; }
+
+.s-section-footer {
+  display: flex;
+  gap: 80px;
+  margin-bottom: 200px; }
+  .s-section-footer img {
+    margin-bottom: 31px; }
+  .s-section-footer b {
+    color: #03060B;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22.4px;
+    letter-spacing: 0.2px;
+    text-align: left; }
+  .s-section-footer p {
+    width: 302px;
+    color: #445B78;
+    font-family: Arial;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.8px;
+    letter-spacing: 0.16px; }
+
+.s-main {
+  display: flex;
+  gap: 128px;
+  margin-bottom: 260px; }
+  .s-main-left {
+    padding-top: 67px; }
+    .s-main-left span {
+      color: #92A0B3;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 15.68px;
+      letter-spacing: 2.24px;
+      text-transform: uppercase; }
+    .s-main-left h3 {
+      width: 461px;
+      color: #03060B;
+      margin-top: 25px;
+      margin-bottom: 34px;
+      font-family: Arial;
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 64px;
+      letter-spacing: 0.64px; }
+    .s-main-left p {
+      width: 430px;
+      color: #445B78;
+      font-family: Arial;
+      margin-bottom: 33px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 25.6px;
+      letter-spacing: 0.16px; }
+    .s-main-left-footer {
+      display: flex;
+      padding: 0px 152px 20px 0px;
+      gap: 40px; }
+  .s-main-right {
+    background-image: url(/images/Rectangle2.png);
+    width: 544px;
+    height: 480px;
+    flex-shrink: 0;
+    border-radius: 32px;
+    background: url(<path-to-image>), cover no-repeat; }
+    .s-main-right-box {
+      padding: 221px 58px 48px 48px; }
+      .s-main-right-box img {
+        width: 96px;
+        height: 40px;
+        margin-bottom: 26px; }
+      .s-main-right-box p {
+        width: 438px;
+        color: #fff;
+        font-family: Arial;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25.6px;
+        letter-spacing: 0.16px;
+        margin-bottom: 36px; }
+      .s-main-right-box span {
+        width: 195px;
+        height: 32px;
+        border-radius: 1000px;
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        font-family: Arial;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 13px;
+        padding: 6px 28px 13px 12px; }
+
+.ss-section {
+  padding-left: 60px;
+  display: flex;
+  padding-bottom: 295px; }
+  .ss-section-left img {
+    width: 568px;
+    height: 386px; }
+  .ss-section-right {
+    width: 720px;
+    height: 385px;
+    background: #fbfbfd;
+    padding-top: 36px;
+    padding-left: 64px;
+    padding-bottom: 96px;
+    padding-right: 217px; }
+    .ss-section-right b {
+      width: 439px;
+      color: #03060B;
+      font-family: Arial;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 35.84px; }
+    .ss-section-right span {
+      font-weight: 700px;
+      margin-bottom: 86px;
+      color: #03060B;
+      font-family: Arial;
+      font-size: 32px;
+      line-height: 35.84px; }
+    .ss-section-right a {
+      margin-top: 86px;
+      color: #3880FF;
+      font-family: Arial;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14px;
+      letter-spacing: 0.28px;
+      display: block; }
+
+.ss-main {
+  display: flex;
+  padding-bottom: 10px; }
+  .ss-main-left {
+    position: relative;
+    width: 716px;
+    height: 499px;
+    background: #425d8d; }
+    .ss-main-left img {
+      position: absolute;
+      width: 116px;
+      height: 278px;
+      top: -160px;
+      left: 0;
+      padding-left: 20.26px; }
+    .ss-main-left h3 {
+      width: 275px;
+      color: #fff;
+      font-family: Arial;
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 53.76px;
+      margin: 151px 167px 186px 274px; }
+  .ss-main-right {
+    width: 723px;
+    height: 499px;
+    background: #e8f5ff;
+    position: relative; }
+    .ss-main-right img {
+      position: absolute;
+      width: 160px;
+      height: 300px;
+      bottom: -100px;
+      right: 0; }
+    .ss-main-right-box {
+      margin: 231px 0 0 103px; }
+      .ss-main-right-box button {
+        width: 155px;
+        color: #fff;
+        font-family: Arial;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 14px;
+        padding: 4px 0px 7px 20px;
+        height: 25px;
+        border-radius: 1000px;
+        background: #1b6dff;
+        border: none;
+        margin-right: 32px; }
+        .ss-main-right-box button i {
+          padding-right: 11px; }
+      .ss-main-right-box a {
+        width: 98px;
+        color: #3880ff;
+        font-family: Arial;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 17.92px; }
+
+/*# sourceMappingURL=main.css.map */

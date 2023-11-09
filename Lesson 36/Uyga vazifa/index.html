@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uyga vazifa</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+</head>
+<body>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        header{
+            min-height: 100px;
+            align-items: center;
+        }
+        .carousel-item img {
+            height: calc(100vh - 100px);
+            width: 100%;
+            object-fit: cover;
+        }
+        .card .card-img-top {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+
+        }
+    </style>
+    
+    <header class="bg-dark">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-dark ">
+                <a class="navbar-brand" href="#">
+                    <img style="width: 74px; height: 74px; object-fit: cover; border-radius:50%;" class="img-fluid"
+                        src="data:image/jpeg;base64,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" alt="logo">
+                </a>
+
+                <span class="text-danger h6 mt-2">TEXNIKALAR</span>
+
+                <button class="navbar-toggler" style="outline: none; font-size: 24px;" type="button"
+                    data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <i class="fa-solid fa-list"></i>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link h6 mt-2" href="#">BOSH SAHIFA</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link h6 mt-2" href="#myTab">APPLE <i class="fa-brands fa-apple"></i></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link h6 mt-2" href="#">WATCH <i class="fa-solid fa-swatchbook"></i></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link h6 mt-2" href="#">AIRPODS <i class="fa-solid fa-headphones"></i></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link disabled h6 mt-2" href="#">DALETE</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <section>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100"
+                        src="https://www.gov.kz/uploads/2023/5/17/6cf164d75b3b16bfee42dd67e4b18643_original.97561.jpg"
+                        alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="https://st-1.akipress.org/st_runews/2/1439502.1.1522238456.jpg"
+                        alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="https://www.apple.com/newsroom/images/product/availability/geo/Apple-September-2022-launch-hero-geo.jpg.og.jpg?202310101624"
+                        alt="Second slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev text-danger " href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="fa-solid fa-angle-left"></span>
+            </a>
+            <a class="carousel-control-next text-danger" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="fa-solid fa-angle-right" aria-hidden="true"></span>
+            </a>
+        </div>
+    </section>
+
+
+    <section class="bg-">   
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center pt-5 pb-3">
+                    <h2 class="h3">APPLE  <i class="fa-brands fa-apple "></i></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav nav-pills" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#all">All</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#iphone">iPHONE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#macbook">MACBOOK</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="all">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 pb-5">
+                                    <div class="card">
+                                        <img src="https://allgood.uz/storage/products/September2023/DNBUKODDMxtVAoYXaVSm.webp"
+                                            alt="" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>iPhone 15 Pro Max 1TR NATURAL</h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 2125</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="card">
+                                        <img src="https://cdn.macbro.uz/macbro/16d26c0c-181a-45cd-a974-850529a0d06e"
+                                            alt="mac" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>MacBook Pro 13.3-inch M1 </h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 1354</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="card">
+                                        <img src="https://openshop.uz/public/storage/uploads/products/photos/202210/aY3U2oN4WVGjeo5x11OsstT8J4EUE0g3f8VDgrTz.jpg"
+                                            alt="apple" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>iPhone 14 Pro Max 1TR PURPLE</h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 1611</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-3">
+                                    <div class="card">
+                                        <img src="https://220volt.uz/image/cache/catalog/apple/MacBook/Macbook%20pro%2016-1-320x320.jpg.webp"
+                                            alt=" mac" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>MacBook Pro 16-inch M2 </h4> 
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 2483</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-5">
+                                    <div class="card">
+                                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1664472289661"
+                                            alt="mac" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>MacBook Air 13-inch M1</h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 982</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-5">
+                                    <div class="card">
+                                        <img src="https://www.creditasia.uz/upload/iblock/15f/gh5door41jdqctwoa73kf2evlmgvo90g/smartfon-apple-iphone-15-plus-128gb-black.jpg"
+                                            alt="apple" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>iPhone 15 Plus 128GB BLACK</h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 1319</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-5">
+                                    <div class="card">
+                                        <img src="https://www.mactrade.de/media/de/96/61/1636533424/MacBook_Air_Blush_PDP_Image_Position-1_M1_Chip__DEDE.jpg"
+                                            alt="mac" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>MacBook Air 13-inch M2</h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 1477</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-5">
+                                    <div class="card">
+                                        <img src="https://openshop.uz/public/storage/uploads/products/photos/202210/k9ALpmSOXA6RUfKvkS7BDz8QmQmrY5fw678zGiUJ.jpg"
+                                            alt="apple" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>iPhone 14 Plus 128GB BLUE</h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 945</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  -->
+
+                        <div class="tab-pane fade" id="iphone">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 pb-5">
+                                    <div class="card">
+                                        <img src="https://allgood.uz/storage/products/September2023/DNBUKODDMxtVAoYXaVSm.webp"
+                                            alt="" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>iPhone 15 Pro Max 1TR NATURAL</h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 2125</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-5">
+                                    <div class="card">
+                                        <img src="https://www.creditasia.uz/upload/iblock/15f/gh5door41jdqctwoa73kf2evlmgvo90g/smartfon-apple-iphone-15-plus-128gb-black.jpg"
+                                            alt="apple" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>iPhone 15 Plus 128GB BLACK</h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 1319</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-5">
+                                    <div class="card">
+                                        <img src="https://m.media-amazon.com/images/I/71v2jVh6nIL.jpg"
+                                            alt="apple" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>iPhone 15 128GB PINK </h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 1337</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-5">
+                                    <div class="card">
+                                        <img src="https://www.scandinavianphoto.se/globalassets/1060724_iphone15_yellow_1.jpg?ref=7B6EEAA979&w=960&h=960&mode=max"
+                                            alt="apple" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>iPhone 15 128GB GOLD </h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 1357</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="card">
+                                        <img src="https://openshop.uz/public/storage/uploads/products/photos/202210/aY3U2oN4WVGjeo5x11OsstT8J4EUE0g3f8VDgrTz.jpg"
+                                            alt="apple" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>iPhone 14 Pro Max 1TR PURPLE</h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 1611</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-5">
+                                    <div class="card">
+                                        <img src="https://openshop.uz/public/storage/uploads/products/photos/202210/k9ALpmSOXA6RUfKvkS7BDz8QmQmrY5fw678zGiUJ.jpg"
+                                            alt="apple" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>iPhone 14 Plus 128GB BLUE</h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 945</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-5">
+                                    <div class="card">
+                                        <img src="https://i5.walmartimages.com/seo/Straight-Talk-Apple-iPhone-14-Plus-128GB-Yellow-Prepaid-Smartphone-Locked-to-Straight-Talk_1a7b247c-4f74-4e4d-8a6d-1adf9301e43b.98e8c4cd65b519c0aa61d5c57da2b15b.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"
+                                            alt="apple" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>iPhone 14 256GB YELLOW</h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 850</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-5">
+                                    <div class="card">
+                                        <img src="https://openshop.uz/public/storage/uploads/products/photos/202212/0EXz3Um5vpHsDUGdmL95rJAmxT8PbE6IFZVezNLE.jpg"
+                                            alt="apple" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>iPhone 14 512GB MIDNIGHT</h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 855</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="macbook">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 pb-5" >
+                                    <div class="card">
+                                        <img src="https://cdn.macbro.uz/macbro/16d26c0c-181a-45cd-a974-850529a0d06e"
+                                            alt="mac" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>MacBook Pro 13.3-inch M1 </h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 1354</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-3">
+                                    <div class="card">
+                                        <img src="https://220volt.uz/image/cache/catalog/apple/MacBook/Macbook%20pro%2016-1-320x320.jpg.webp"
+                                            alt=" mac" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>MacBook Pro 16-inch M2 </h4> 
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 2483</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-5">
+                                    <div class="card">
+                                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1664472289661"
+                                            alt="mac" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>MacBook Air 13-inch M1</h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 982</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-5">
+                                    <div class="card">
+                                        <img src="https://www.mactrade.de/media/de/96/61/1636533424/MacBook_Air_Blush_PDP_Image_Position-1_M1_Chip__DEDE.jpg"
+                                            alt="mac" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>MacBook Air 13-inch M2</h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 1477</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-5">
+                                    <div class="card">
+                                        <img src="https://assets.asaxiy.uz/product/items/desktop/3988c7f88ebcb58c6ce932b957b6f33220220928113503204571FQ57ONwCW.png.webp"
+                                            alt="mac" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>MacBook Air 13.3-inch M2</h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 988</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 pb-5" >
+                                    <div class="card">
+                                        <img src="https://assets.asaxiy.uz/product/items/desktop/c8ffe9a587b126f152ed3d89a146b4452022092811350254132pfexmhEL6B.png.webp"
+                                            alt="mac" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>MacBook Pro 13.3-inch M2 BLACK </h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 1462</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 pb-5" >
+                                    <div class="card">
+                                        <img src="https://cdn.macbro.uz/macbro/16d26c0c-181a-45cd-a974-850529a0d06e"
+                                            alt="mac" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>MacBook Pro 13.3-inch M2 SILVER </h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 1454</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 pb-5" >
+                                    <div class="card">
+                                        <img src="https://olcha.uz/image/400x400/products/2022-08-15/noutbuk-apple-macbook-pro-13-m2-8256gb-99035-1.jpeg"
+                                            alt="mac" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>MacBook Pro 13-inch M2 </h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span class="text-info">Цена:
+                                                <span class="text-danger"> 1258</span>$
+                                            </span>
+                                            <button class="btn btn-primary ml-4">
+                                                <a class="text-white" href="https://t.me/salokh_070" target="_blank">Купить</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

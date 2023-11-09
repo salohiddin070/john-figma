@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive cols</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        header {
+            display: flex;
+            min-height: 100px;
+            align-items: center;
+        }
+
+        .carousel-item img {
+            height: calc(100vh - 100px);
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            opacity: 1;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.6);
+            line-height: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+            /* left: 20px; */
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .carousel-control-prev {
+            left: 20px;
+        }
+
+        .carousel-control-next {
+            right: 20px;
+        }
+
+        .carousel-indicators {
+            gap: 10px;
+        }
+
+        .carousel-indicators [data-target*="#carouselExampleIndicators"] {
+            width: 15px;
+            height: 15px;
+            /* border-radius: 7.5px; */
+            transform: rotateZ(45deg);
+            background-color: rgb(153, 181, 209);
+
+        }
+
+        .carousel-indicators li.active {
+            background-color: dodgerblue;
+        }
+
+        .card .card-img-top {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-dark">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-dark ">
+                <a class="navbar-brand" href="#">
+                    <img style="width: 60px; height: 60px; object-fit: cover; border-radius:50%;" class="img-fluid"
+                        src="https://img.freepik.com/premium-vector/logo-design_1016686-301.jpg" alt="logo">
+                </a>
+
+                <span class="text-white">Lion Shop</span>
+
+                <button class="navbar-toggler" style="outline: none; font-size: 24px;" type="button"
+                    data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <i class="fa-solid fa-list"></i>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Categories</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Our Clients</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100"
+                        src="https://cdn.sanity.io/images/bl383u0v/production/9912c12e410c99a3275c8507be01fedbd3d10e4a-2880x1620.jpg"
+                        alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="https://image.cnbcfm.com/api/v1/image/102952779-SephorainsideJCPenney1.jpg?v=1440696951&w=929&h=523&vtcrop=y"
+                        alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="https://media.fashionnetwork.com/m/1ac7/4984/422b/c701/e0a7/6695/a47c/2f00/32a2/5c6b/5c6b.jpg"
+                        alt="Second slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="fa-solid fa-angle-left"></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="fa-solid fa-angle-right" aria-hidden="true"></span>
+            </a>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center pt-5  pb-3">
+                    <h2 class="h3">CATACORIES</h2>
+                    <p class="w-75 mx-auto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit omnis
+                        accusamus neque nisi veritatis repellendus asperiores delectus repudiandae optio Lorem ipsum
+                        dolor sit amet consectetur, adipisicing elit. Tempora, tenetur?</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav nav-pills" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home">All</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile">Kids</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact">Shoes</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="card">
+                                        <img src="https://www.sheknows.com/wp-content/uploads/2020/07/etsy-kids-hipster-clothes.png?w=607"
+                                            alt="kids boy clothes" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>Shoes name blog</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, quia
+                                                illo?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="card">
+                                        <img src="https://kallos.co/cdn/shop/products/giay-adidas-stan-smith-lux-off-white-kallos-vietnam-3.jpg?v=1676071294"
+                                            alt="shoes" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>Shoes name blog</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, quia
+                                                illo?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="card">
+                                        <img src="https://www.thegoodtrade.com/wp-content/uploads/2023/01/colored-organics-cotton-kids-clothes.jpeg"
+                                            alt="" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>Shoes name blog</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, quia
+                                                illo?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="card">
+                                        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/4948095c2bd04bbcb5c2af1601154a02_9366/Stan_Smith_Lux_Shoes_White_HP2201_HM1.jpg"
+                                            alt=" shoes white" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>Shoes name blog</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, quia
+                                                illo?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="card">
+                                        <img src="https://www.sheknows.com/wp-content/uploads/2020/07/etsy-kids-hipster-clothes.png?w=607"
+                                            alt="kids boy clothes" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>Shoes name blog</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, quia
+                                                illo?</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="card">
+                                        <img src="https://www.thegoodtrade.com/wp-content/uploads/2023/01/colored-organics-cotton-kids-clothes.jpeg"
+                                            alt="" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>Shoes name blog</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, quia
+                                                illo?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="contact">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="card">
+                                        <img src="https://kallos.co/cdn/shop/products/giay-adidas-stan-smith-lux-off-white-kallos-vietnam-3.jpg?v=1676071294"
+                                            alt="shoes" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>Shoes name blog</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, quia illo?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                    <div class="card">
+                                        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/4948095c2bd04bbcb5c2af1601154a02_9366/Stan_Smith_Lux_Shoes_White_HP2201_HM1.jpg"
+                                            alt=" shoes white" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4>Shoes name blog</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, quia illo?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
